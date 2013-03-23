@@ -3,7 +3,7 @@ from django.db import models
 # depends on the tweetnet git project: https://github.com/jonathanmorgan/tweetnet.git
 import tweetnet
 
-class TweetIdeology( tweetnet.models.Abstract_Tweet ):
+class TweetIdeology( tweetnet.models.Tweet ):
 
     # ideology variables.  Need to get these out, add them to an extended class
     #    or a separate class.
@@ -41,7 +41,7 @@ class TweetIdeology( tweetnet.models.Abstract_Tweet ):
 #-- END class Tweet_Ideology --#
 
 
-class Twitter_User_Ideology( tweetnet.models.Abstract_Twitter_User ):
+class Twitter_User_Ideology( tweetnet.models.Twitter_User ):
 
     # aggregation fields.
     tweet_count = models.IntegerField( null = True, blank = True )
